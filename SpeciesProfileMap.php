@@ -49,7 +49,7 @@ class SpeciesProfileMap extends RecordingMap
     }
 
 
-    public function getLegendVfunc_ioc() {
+    public function getLegendVfunc() {
         $html = "<div class=\"map-legend\">";
         
         // SQL query to get subspecies data ordered by subspecies sequence (ssp_seq)
@@ -203,7 +203,7 @@ class SpeciesProfileMap extends RecordingMap
 
     
 
-    public function getLegendVfunc()
+    public function getLegendVfunc_defaultone()
     {
         $html = "
             <div class=\"map-legend\">";
