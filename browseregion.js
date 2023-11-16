@@ -269,7 +269,7 @@ if (currentURL.includes(expectedPath2)) {
         map.fitBounds(drawnBounds);
 
         // Update the HTML content to display a loading message
-        jQuery('#region-results2').html('<p>Querying database...</p>');
+        jQuery('#region-results').html('<p>Querying database...</p>');
         updateLegendToLoading();
 
         // Fetch data for the drawn bounds
@@ -296,7 +296,7 @@ if (currentURL.includes(expectedPath2)) {
     function handleBoxZoomEnd(e) {
 
         // Update the HTML content to display a loading message
-        jQuery('#region-results2').html('<p>Querying database...</p>');
+        jQuery('#region-results').html('<p>Querying database...</p>');
 
         drawnBounds = e.boxZoomBounds;
 
@@ -336,8 +336,8 @@ if (currentURL.includes(expectedPath2)) {
                     noteMore = '(only the first ' + data.markers.length + ' recordings are shown on the map)';
                 }
 
-                // Update the HTML content of the 'region-results2' element to display the summary information and the additional note.
-                jQuery('#region-results2').html(`<p><a href="${url}">${data.summary.recordings} Recordings from ${data.summary.species} species</a> ${noteMore} found in the selected region</p>`);
+                // Update the HTML content of the 'region-results' element to display the summary information and the additional note.
+                jQuery('#region-').html(`<p><a href="${url}">${data.summary.recordings} Recordings from ${data.summary.species} species</a> ${noteMore} found in the selected region</p>`);
             })
 
             .catch(error => {
@@ -353,7 +353,7 @@ if (currentURL.includes(expectedPath2)) {
             var apiUrl = constructApiUrl(drawnBounds, query); // Construct the API URL with the bounds and the new query
             fetchDataAndCreateGrid(apiUrl); // Fetch the data and update the map
             // Update the HTML content to display a loading message
-            jQuery('#region-results2').html('<p>Querying database...</p>');
+            jQuery('#region-results').html('<p>Querying database...</p>');
         } else {
             // Handle the case when there is no drawnBounds
         }

@@ -106,26 +106,7 @@ class GenusProfileMap extends RecordingMap
     return $html;
 }
 
-    public function getLegendVfunc_defaultone()
-    {
-        $html = "
-            <div class=\"map-legend\">";
 
-        if ($this->m_spMarkerSpec) {
-            $html .= '
-                <ul>';
-
-            foreach ($this->m_spMarkerSpec as $spec) {
-                $html .= "<li><span class=\"marker-image\"><img class=\"icon\" src=\"{$spec->url}\" /></span> <span class=\"marker-text\">{$spec->legendText}</span></li>";
-            }
-            $html .= '</ul>';
-        }
-
-        $html .= '
-            </div>';
-
-        return $html;
-    }
 
     
     protected function createMarkerForRecording($rec)

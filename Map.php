@@ -89,7 +89,7 @@ abstract class Map
 
                 <script type="text/javascript" src="/static/js/browseregion.js"></script>
 
-                <script type="text/javascript" src="/static/js/mymap-upload.js"></script>
+                <script type="text/javascript" src="/static/js/map-upload.js"></script>
 
         <script type="text/javascript" src="/static/js/gnsmap.js"></script>
 

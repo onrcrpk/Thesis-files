@@ -46,7 +46,7 @@ class BrowseRegion extends Controller
             </tr>
             </table>
             </form>
-            <span id='region-results2'></span>
+            <span id='region-results'></span>
                 
         
 

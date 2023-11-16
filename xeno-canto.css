@@ -2112,19 +2112,12 @@ div#news-discussion section.comments article header {
     height: 400px;
 }
 
-#species-profile #browseregion {
-  width: 100%;
-  height: 400px;
-}
-
-#species-profile #sspmap {
-  width: 100%;
-  height: 400px;
-}
-
-#species-profile #gnsmap {
-  width: 100%;
-  height: 400px;
+#species-profile #sspmap,
+#species-profile #gnsmap,
+#species-profile #browseregion,
+#upload-location #map-upload {
+    width: 100%;
+    height: 400px;
 }
 
 #species-profile .map-sidebar {
@@ -2360,11 +2353,7 @@ div.range-legend img
 }
 
 
-#upload-location #map-upload
-{
-  width: 100%;
-  height: 500px;
-}
+
 
 #browse-region #map-canvas
 {
