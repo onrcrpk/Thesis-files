@@ -21,7 +21,7 @@ if (urlPattern.test(currentURL)) {
       [-90, -Infinity],
       [90, Infinity]
     ],
-    wheelPxPerZoomLevel: 120 // Default is 60, try doubling to decrease sensitivity
+    wheelPxPerZoomLevel: 120 // Default is 60, double it to decrease sensitivity
   }).setView([35, 15], 2);
 
 
@@ -39,7 +39,7 @@ if (urlPattern.test(currentURL)) {
   // Define a single tile layer for GBIF
   var gbifTileLayer = L.tileLayer(gbifTileURL, {
     attribution: 'Tiles &copy; GBIF',
-    maxZoom: 17, // Adjust maxZoom as needed
+    maxZoom: 17,
     opacity: 1
   });
 
@@ -52,14 +52,14 @@ if (urlPattern.test(currentURL)) {
         attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
       }).setOpacity(1).addTo(map),
       maxZoom: 17,
-      icon: '/static/js/img/terrain.jpeg', // Correct path to the icon
+      icon: '/static/js/img/terrain.jpeg',
       name: 'WorldStreet'
     },
     {
       layer: L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
         attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
       }).setOpacity(1),
-      icon: '/static/js/img/topo.jpg', // Correct path to the icon
+      icon: '/static/js/img/topo.jpg', 
       name: 'Topo'
     },
     {
@@ -67,19 +67,19 @@ if (urlPattern.test(currentURL)) {
         attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
       }).setOpacity(0.9),
       maxZoom: 21,
-      icon: '/static/js/img/satellite.jpg', // Correct path to the icon
+      icon: '/static/js/img/satellite.jpg',
       name: 'Satellite'
     },
     {
       layer: L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors)'
       }),
-      icon: '/static/js/img/osm.png', // Correct path to the icon
+      icon: '/static/js/img/osm.png', 
       name: 'OSM'
     },
     {
       layer: gbifTileLayer,
-      icon: '/static/js/img/geyser.png', // Correct path to the icon
+      icon: '/static/js/img/geyser.png', 
       name: 'GBIF'
     },
   ], { position: 'bottomleft' }).addTo(map);

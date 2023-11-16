@@ -14,7 +14,7 @@ if (currentURL.includes(expectedPath3)) {
     worldCopyJump: true,
     zoomControl: false, // default zoom control is on the left top.
     worldCopyJump: true, // Enable world copy jump
-    wheelPxPerZoomLevel: 120 // Default is 60, try doubling to decrease sensitivity
+    wheelPxPerZoomLevel: 120 // Default is 60,double it to decrease sensitivity
   }).setView([35, 15], 2);
 
 
@@ -33,7 +33,7 @@ if (currentURL.includes(expectedPath3)) {
   // Define a single tile layer for GBIF
   var gbifTileLayer = L.tileLayer(gbifTileURL, {
     attribution: 'Tiles &copy; GBIF',
-    maxZoom: 17, // Adjust maxZoom as needed
+    maxZoom: 17, 
     opacity: 1
   });
 
@@ -46,14 +46,14 @@ if (currentURL.includes(expectedPath3)) {
         attribution: 'Tiles &copy; Esri'
       }).setOpacity(1).addTo(map),
       maxZoom: 17,
-      icon: '/static/js/img/terrain.jpeg', // Correct path to the icon
+      icon: '/static/js/img/terrain.jpeg', 
       name: 'WorldStreet'
     },
     {
       layer: L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
         attribution: 'Tiles &copy; Esri'
       }).setOpacity(0.9),
-      icon: '/static/js/img/topo.jpg', // Correct path to the icon
+      icon: '/static/js/img/topo.jpg',
       name: 'Topographic'
     },
     {
@@ -61,19 +61,19 @@ if (currentURL.includes(expectedPath3)) {
         attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
       }).setOpacity(0.9),
       maxZoom: 21,
-      icon: '/static/js/img/satellite.jpg', // Correct path to the icon
+      icon: '/static/js/img/satellite.jpg', 
       name: 'Satellite'
     },
     {
       layer: L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors)'
       }),
-      icon: '/static/js/img/osm.png', // Correct path to the icon
+      icon: '/static/js/img/osm.png', 
       name: 'OSM'
     },
     {
       layer: gbifTileLayer,
-      icon: '/static/js/img/geyser.png', // Correct path to the icon
+      icon: '/static/js/img/geyser.png', 
       name: 'GBIF'
     },
   ], { position: 'topleft' }).addTo(map);
@@ -87,7 +87,7 @@ controlElement.addEventListener('mouseenter', function() {
 });
 
 controlElement.addEventListener('mouseleave', function() {
-    controlElement.style.flexDirection = ''; // Reset to default or 'row' if you want to set it explicitly.
+    controlElement.style.flexDirection = ''; 
 });
 
 
@@ -208,7 +208,7 @@ controlElement.addEventListener('mouseleave', function() {
     { h: 60, s: 100, l: 50 },   // yellow
     { h: 100, s: 100, l: 39 },   // green
     { h: 195, s: 100, l: 50 },   // blue
-    { h: 240, s: 100, l: 35 },   // purple
+    { h: 240, s: 100, l: 35 },   // darkblue
   ];
 
 
