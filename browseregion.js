@@ -529,7 +529,7 @@ if (currentURL.includes(expectedPath2)) {
                 : getColor(recordingsCount, maxRecordingsCount, 'recordings'); // Use maxRecordingsCount for recordings
 
             const rectangle = L.rectangle(
-                [[gridLat, gridLng], [gridLat + (gridSize / 2), gridLng + gridSize]],
+                [[gridLat, gridLng], [gridLat + (gridSize), gridLng + gridSize]],
                 {
                     color: color,
                     weight: 1.2,
